@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+         background-color: rgba(0, 0, 255, 0.444);
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         box-sizing: border-box;
+        }
+        .container{
+            position: relative;
+            margin: 0 15px;
+            width: 100%;
+            padding: 30px;
+            max-width:900px;
+            border: 0 5px solid rgb(0, 0, 0);
+            border-radius:5px;
+            box-shadow: 0 5px 10px black;
+            background-color: aliceblue;       
+        }
+      .container header{
+        display: flex;
+        font-size: 20px;
+        margin-top: 12px;
+        font-weight: 600;
+        color:#333
+      }
+      .input-fields{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        
+      }
+      .container form{
+        position: relative;
+        min-height: 490px;
+        border-radius: 5px;
+        background-color: #ffffff;
+      }
+      .container form .form{
+        position: absolute;
+        background-color: #ffffff;
+      }
+      .container form .form.second{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .container form .form.second{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .container form .form.first{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .container form .personal{
+        margin-top: 30px;
+      }
+      .container form .personal .id{
+        margin-top: 30px;
+      }
+      .container form .fields{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+       form .fields .input-fields{
+        display:flex;
+        width:calc(100% /3 - 10px);
+        flex-direction:column;
+      } 
+      .input-fields input{
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        padding: 0 15px;
+        height: 35px;
+        margin: 4px 0;
+      }
+      .container form button{
+        display: flex;
+        background-color: blue;
+        justify-content: center;
+        align-items: center; 
+        height: 45px;
+        max-width: 200px;
+        width: 100%;
+        border: none;
+        outline: none;
+        color: white;    
+        border-radius: 5px;
+        margin-top: 20px;
+     }
+     form button:hover{
+        background-color: green;
+     }
+     .selider{
+        max-width: 900px;
+        width: 100%;
+        height: 1px;
+        background-color: black;
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <header>Registration</header>
+          <form action="#">
+            <div class="form-first">
+                <div class="personal">
+                    <span class="tital">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter the name">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Date birth date</label>
+                            <input type="date" placeholder="Enter date of birth">
+                        </div>
+                        <div class="input-fields">
+                            <label>Enter the gmail</label>
+                            <input type="email" placeholder="Enter the email">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="Enter the Mobile Number">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Gender</label>
+                            <input type="text" placeholder="Enter Gender">
+                        </div>
+                        <div class="input-fields">
+                            <label>Occuption</label>
+                            <input type="text" placeholder="Enter the Occuption">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- second selid -->
+                 <a href=""></a>
+                <div class="personal id">
+                    <span class="tital">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Id Type</label>
+                            <input type="text" placeholder="Enter Id Type">
+                        </div>
+                        <div class="input-fields">  
+                            <label>ID Number</label>
+                            <input type="text" placeholder="Enter ID Number">
+                        </div>
+                        <div class="input-fields">
+                            <label>Issue Authority</label>
+                            <input type="text" placeholder="Enter issue department">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Issue State</label>
+                            <input type="text" placeholder="Enter issue State">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Issue Date</label>
+                            <input type="date" placeholder="Enter issue Date">
+                        </div>
+                        <div class="input-fields">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter Expiry Date">
+                        </div>
+                    </div>
+                       <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        
+                    </button>
+                </div>
+            </div>
+      <div class="selider"></div>      
+            <!-- mother details -->
+            <div class="form-first">
+                <div class="personal">
+                    <span class="tital">Family Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Enter Name</label>
+                            <input type="text" placeholder="Enter the name">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Date birth date</label>
+                            <input type="date" placeholder="Enter date of birth">
+                        </div>
+                        <div class="input-fields">
+                            <label>Enter the gmail</label>
+                            <input type="email" placeholder="Enter the email">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="Enter the Mobile Number">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Gender</label>
+                            <input type="text" placeholder="Enter Gender">
+                        </div>
+                        <div class="input-fields">
+                            <label>Occuption</label>
+                            <input type="text" placeholder="Enter the Occuption">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- second page  second selid -->
+                 <a href=""></a>
+                <div class="personal id">
+                    <span class="tital">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Id Type</label>
+                            <input type="text" placeholder="Enter Id Type">
+                        </div>
+                        <div class="input-fields">  
+                            <label>ID Number</label>
+                            <input type="text" placeholder="Enter ID Number">
+                        </div>
+                        <div class="input-fields">
+                            <label>Issue Authority</label>
+                            <input type="text" placeholder="Enter issue department">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Issue State</label>
+                            <input type="text" placeholder="Enter issue State">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Issue Date</label>
+                            <input type="date" placeholder="Enter issue Date">
+                        </div>
+                        <div class="input-fields">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter Expiry Date">
+                        </div>
+                    </div>
+                         <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        
+                    </button>
+                </div>
+            </div>
+<div class="selider"></div>                
+            <div class="form-first">
+                <div class="personal">
+                    <span class="tital">Father Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter the name">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Date birth date</label>
+                            <input type="date" placeholder="Enter date of birth">
+                        </div>
+                        <div class="input-fields">
+                            <label>Enter the gmail</label>
+                            <input type="email" placeholder="Enter the email">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="Enter the Mobile Number">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Gender</label>
+                            <input type="text" placeholder="Enter Gender">
+                        </div>
+                        <div class="input-fields">
+                            <label>Occuption</label>
+                            <input type="text" placeholder="Enter the Occuption">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- second selid -->
+                 <a href=""></a>
+                <div class="personal id">
+                    <span class="tital">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Id Type</label>
+                            <input type="text" placeholder="Enter Id Type">
+                        </div>
+                        <div class="input-fields">  
+                            <label>ID Number</label>
+                            <input type="text" placeholder="Enter ID Number">
+                        </div>
+                        <div class="input-fields">
+                            <label>Issue Authority</label>
+                            <input type="text" placeholder="Enter issue department">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Issue State</label>
+                            <input type="text" placeholder="Enter issue State">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Issue Date</label>
+                            <input type="date" placeholder="Enter issue Date">
+                        </div>
+                        <div class="input-fields">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter Expiry Date">
+                        </div>
+                    </div>
+                       <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        
+                    </button>
+                </div>
+            </div>
+<div class="selider"></div>               
+            <!-- mother details -->
+            <div class="form-first">
+                <div class="personal">
+                    <span class="tital">Mother Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Mother Name</label>
+                            <input type="text" placeholder="Enter the name">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Date birth date</label>
+                            <input type="date" placeholder="Enter date of birth">
+                        </div>
+                        <div class="input-fields">
+                            <label>Enter the gmail</label>
+                            <input type="email" placeholder="Enter the email">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Mobile Number</label>
+                            <input type="text" placeholder="Enter the Mobile Number">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Gender</label>
+                            <input type="text" placeholder="Enter Gender">
+                        </div>
+                        <div class="input-fields">
+                            <label>Occuption</label>
+                            <input type="text" placeholder="Enter the Occuption">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- second page  second selid -->
+                 <a href=""></a>
+                <div class="personal id">
+                    <span class="tital">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Id Type</label>
+                            <input type="text" placeholder="Enter Id Type">
+                        </div>
+                        <div class="input-fields">  
+                            <label>ID Number</label>
+                            <input type="text" placeholder="Enter ID Number">
+                        </div>
+                        <div class="input-fields">
+                            <label>Issue Authority</label>
+                            <input type="text" placeholder="Enter issue department">
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-fields">
+                            <label>Issue State</label>
+                            <input type="text" placeholder="Enter issue State">
+                        </div>
+                        <div class="input-fields">  
+                            <label>Issue Date</label>
+                            <input type="date" placeholder="Enter issue Date">
+                        </div>
+                        <div class="input-fields">
+                            <label>Expiry Date</label>
+                            <input type="date" placeholder="Enter Expiry Date">
+                        </div>
+                    </div>
+                         <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        
+                    </button>
+                </div>
+            </div>
+          </form>
+          
+    </div>
+    <script>
+        const form =document.querySelector("form"),
+        nextBtn=form.querySelector("nextBtn"),
+        allInput=form.querySelectorAll(".first input");
+
+        nextBtn.addEventListener("click",()=>{
+            allInput.forEach(input=>{
+                if(input.value!=""){
+                    form.classList.add('secActive');
+                }
+                else{
+                    form.classList.remove('secActive');
+                    
+                }
+            })
+        })
+    </script>
+</body>
+</html>
